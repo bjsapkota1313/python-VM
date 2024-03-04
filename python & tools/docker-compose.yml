@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  python-tools:
+    build:
+      context: .
+      dockerfile: Vm.DockerFile
+    volumes:
+      - ./projects:/projects
+    ports:
+      - "5000:5000" #default port for flask
